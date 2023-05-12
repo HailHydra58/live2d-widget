@@ -13,9 +13,6 @@ function loadWidget(config) {
             <div id="waifu-tool"></div>
         </div>`);
     // https://stackoverflow.com/questions/24148403/trigger-css-transition-on-appended-element
-    setTimeout(() => {
-        document.getElementById("waifu").style.bottom = 0;
-    }, 0);
 
     (function registerTools() {
         tools["switch-model"].callback = () => model.loadOtherModel();
@@ -43,7 +40,7 @@ function loadWidget(config) {
                 }
             }
         }
-        const text = `欢迎阅读<span>「${document.title.split(" - ")[0]}」</span>`;
+        const text = `欢迎进入<span>「${document.title.split(" - ")[0]}」</span>`;
         let from;
         if (document.referrer !== "") {
             const referrer = new URL(document.referrer),
